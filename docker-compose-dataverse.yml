@@ -1,16 +1,12 @@
 ---
 name: rudiplatform
 
-# Uncomment to add persistence between test run
-# volumes:
-#   database-data:
-
 services:
   dataverse-database:
-    image: postgres:15.8
-    restart: unless-stopped
     ports:
       - 35433:5432
+    image: postgres:15.12-bookworm
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "pg_isready"]
       interval: 30s
@@ -25,64 +21,103 @@ services:
       - "POSTGRES_PORT=5432"
     volumes:
       - ./config/dataverse-init/:/docker-entrypoint-initdb.d/
-    # Uncomment to add persistence between test run
-    #  - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
-    profiles:
-      - dataverse
 
   solr:
     image: rudiplatform/dataverse-solr
-    build: ./image/dataverse-solr
+    build: ./image/solr
     privileged: true
+    ports:
+      - "8983:8983"
     environment:
       - "DATAVERSE_HOST=dataverse"
       - "SOLR_HOST=solr"
       - "SOLR_JAVA_MEM=-Xms1g -Xmx1g"
+      - "SOLR_OPTS=-Dlog4j2.formatMsgNoLookups=true -Dsolr.jetty.request.header.size=65535"
     volumes:
+      - ./solr-tmp:/var/tmp
       - ./data/solr/solr-data:/var/solr/data
     profiles:
       - dataverse
 
+  dataverse-whoami:
+    image: "containous/whoami"
+
   dataverse:
-    image: rudiplatform/dataverse-engine
-    build: ./image/dataverse-engine
+    image: rudiplatform/dataverse
+    build: ./image/dataverse
     privileged: true
     user:
       "root"
     ports:
-      - 8081:8080
-      - 4848:4848
+      - "4848:4848"
+      - "8181:8181"
     environment:
       - "CVM_SERVER_NAME=CESSDA" #Optional
-      - "CVM_SERVER_URL=https://magnolia.${base_dn}/"
-      - "CVM_TSV_SOURCE=https://github.com/IQSS/dataverse-docker/releases/download/5.3-cv/cvocdemo.tsv"
-      - "LANG=en"
+      - "CVM_SERVER_URL=https://ns2.${base_dn}"
       - "cvManager=http://"
+      - "WEBHOOK=/opt/payara/triggers/external-services.py"
+      - "CESSDA"
+      - "CLARIN"
+      - "aws_bucket_name"
+      - "aws_s3_profile"
+      - "aws_endpoint_url"
+      - "system_email"
+      - "mailhost"
+      - "mailuser"
+      - "no_reply_email"
+      - "smtp_password"
+      - "smtp_port"
+      - "socket_port"
+      - "federated_json_file"
+      - "bucketname_1"
+      - "minio_label_1"
+      - "minio_bucket_1"
+      - "bucketname_2"
+      - "minio_profile_1"
+      - "minio_label_2"
+      - "minio_bucket_2"
+      - "minio_profile_2"
+      - "LANG=en"
+      - "MAINLANG=fr"
       - "BUNDLEPROPERTIES=Bundle.properties"
+      - "ADMIN_USER=dataverseAdmin"
       - "ADMIN_EMAIL=admin@localhost"
       - "MAIL_SERVER=mailrelay"
-      - "SOLR_LOCATION=solr:8983"
-      - "RSERVE_HOST=localhost"
-      - "RSERVE_PORT=6311"
-      - "RSERVE_USER=rserve"
-      - "RSERVE_PASSWORD=rserve"
       - "DATAVERSE_DB_HOST=dataverse-database"
       - "DATAVERSE_DB_PORT=5432"
       - "DATAVERSE_DB_USER=dataverse"
       - "DATAVERSE_DB_PASSWORD=dataverse_db_password"
       - "DATAVERSE_DB_NAME=dataverse"
+      - "PGPASSWORD"
       - "DATAVERSE_SERVICE_HOST"
-      - "DATAVERSE_URL"
+      - "DATAVERSE_URL=dataverse:8080"
       - "SOLR_SERVICE_HOST=solr"
       - "SOLR_SERVICE_PORT=8983"
-      - "GLASSFISH_DOMAIN=domain1"
-    depends_on:
-      dataverse-database:
-        condition: service_healthy
-      solr:
-        condition: service_started
-    volumes:
-      - ./data/dataverse/dataverse-files:/data
-    profiles:
-      - dataverse
+      - "SOLR_LOCATION=solr:8983"
+      - "INIT_SCRIPTS_FOLDER=/opt/payara/init.d"
+      - "TWORAVENS_LOCATION=NOT INSTALLED"
+      - "RSERVE_HOST=localhost"
+      - "RSERVE_PORT=6311"
+      - "RSERVE_USER=rserve"
+      - "RSERVE_PASSWORD=rserve"
+      - "dataverse_pid_providers=fake"
+      - "dataverse_pid_fake_type=FAKE"
+      - "dataverse_pid_fake_label=Fake DOI Provider"
+      - "dataverse_pid_fake_authority=10.5072"
+      - "dataverse_pid_fake_shoulder=FK2/"
+      - "dataverse_pid_default-provider=fake"
+      - "dataverse_files_storage-driver-id=file"
+      - "dataverse_files_file_type=file"
+      - "dataverse_files_file_directory=/data"
+      - "doi_authority"
+      - "doi_provider"
+      - "doi_username"
+      - "doi_password"
+      - "dataciterestapiurlstring"
+      - "baseurlstring"
 
+
+volumes:
+  database-data:
+  solr-data:
+  dataverse-data:
