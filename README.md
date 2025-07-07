@@ -15,10 +15,13 @@
 
 ### Avant de commencer 
 
-Pour faire tourner RUDI sur votre machine, vous aurez besoin de :
-- [Docker](https://docs.docker.com/get-docker/) - Pour la containerisation
-- [Docker Compose](https://docs.docker.com/compose/install/) - Pour tout orchestrer 
-- [Git LFS](https://git-lfs.com/) - Pour gérer les grands fichiers
+Pour faire tourner RUDI Out-Of-The-Box sur votre machine, vous aurez besoin de :
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - Pour récupérer les fichiers 
+- [Git LFS](https://git-lfs.com/) - Pour gérer les grands fichiers avec Git - [Guide d'installation sous Linux](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage?platform=linux)
+- [Docker Engine](https://docs.docker.com/engine/install/) - Pour la containerisation
+- [Docker Compose](https://docs.docker.com/compose/install/) - Pour tout orchestrer [Guide d'installation sous Linux](https://docs.docker.com/compose/install/#plugin-linux-only)
+
+> _NOTE :_ Il n'est pas nécessaire de disposer de Docker Desktop pour faire tourner RUDI sur votre machine. En effet, Docker Desktop n'est gratuit que pour les utilisateurs individuels, pas pour les organisations. Cf. [Docker Pricing](https://www.docker.com/pricing/) pour plus d'informations.
 
 ### 1. Récupérez le code et donnez les droits d'accès nécessaires
 
