@@ -56,13 +56,16 @@ services:
       - "traefik.http.middlewares.apigateway-rewritepath.replacepathregex.replacement=/apigateway/datasets/$$1"
       - "traefik.http.routers.apigateway.middlewares=apigateway-rewritepath"
       - "traefik.http.routers.apigateway.rule=Host(`rudi.${base_dn}`) && ( PathPrefix(`/apigateway`) || PathPrefix(`/medias`))"
-
+      
   strukture:
     labels:
       - "traefik.enable=true"
       - "traefik.http.services.strukture.loadbalancer.server.scheme=https"
       - "traefik.http.services.strukture.loadbalancer.server.port=8443"
-      - "traefik.http.routers.strukture.rule=Host(`rudi.${base_dn}`) && PathPrefix(`/strukture`)"
+      - "traefik.http.middlewares.strukture-rewritepath.replacepathregex.regex=^/node/(.*)"
+      - "traefik.http.middlewares.strukture-rewritepath.replacepathregex.replacement=/strukture/$$1"
+      - "traefik.http.routers.strukture.middlewares=strukture-rewritepath"
+      - "traefik.http.routers.strukture.rule=Host(`rudi.${base_dn}`) && ( PathPrefix(`/strukture`) || PathPrefix(`/node`))"
 
   acl:
     labels:

@@ -115,7 +115,12 @@ services:
       - "doi_password"
       - "dataciterestapiurlstring"
       - "baseurlstring"
-
+    depends_on:
+      - dataverse-database
+      - solr
+    volumes:
+      - ./data/dataverse/secrets:/secrets
+      - ./data/dataverse/dataverse-files:/data
 
 volumes:
   database-data:
