@@ -11,7 +11,7 @@ services:
       - "LC_ALL=C.UTF-8"
       - "POSTGRES_DB=magnolia"
       - "POSTGRES_USER=magnolia"
-      - "POSTGRES_PASSWORD=magnolia"
+      - "POSTGRES_PASSWORD=Rud1R00B-db-magnolia"
       - "POSTGRES_PORT=5432"
     healthcheck:
       test: ["CMD", "pg_isready"]
@@ -43,6 +43,6 @@ services:
       - "MAGNOLIA_BDD_USER=magnolia"
       - "MAGNOLIA_BDD_PASSWORD=magnolia" #NE PAS UTILISER DANS DES CONDITIONS DE PRODUCTIONS POUR DES RAISONS EVIDENTES
       - "MAGNOLIA_REPOSITORY_ROOT=/opt/magnolia/data"
-      - "CATALINA_OPTS=-DMAGNOLIA_REPOSITORY_ROOT=\"/opt/magnolia/data\"  -DMAGNOLIA_BDD_HOST=magnolia-database -DMAGNOLIA_BDD_USER=magnolia -DMAGNOLIA_BDD_PASSWORD=magnolia -Xmx2048m -Dmagnolia.update.auto=true"
+      - "CATALINA_OPTS=-DMAGNOLIA_REPOSITORY_ROOT=\"/opt/magnolia/data\"  -DMAGNOLIA_BDD_HOST=magnolia-database -DMAGNOLIA_BDD_USER=magnolia -DMAGNOLIA_BDD_PASSWORD=Rud1R00B-db-magnolia -Xmx2048m -Dmagnolia.update.auto=true"
     profiles:
       - magnolia

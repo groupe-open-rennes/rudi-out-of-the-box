@@ -8,7 +8,7 @@ CREATE USER acl WITH
   NOREPLICATION;
 
 ALTER USER acl SET search_path TO acl_data, public;
-ALTER USER acl WITH PASSWORD 'acl';
+ALTER USER acl WITH PASSWORD 'Rud1R00B-db-acl';
 
 CREATE USER kalim WITH
   LOGIN
@@ -19,7 +19,7 @@ CREATE USER kalim WITH
   NOREPLICATION;
 
 ALTER USER kalim SET search_path TO kalim_data, public;
-ALTER USER kalim WITH PASSWORD 'kalim';
+ALTER USER kalim WITH PASSWORD 'Rud1R00B-db-kalim';
 
 CREATE USER konsent WITH
   LOGIN
@@ -30,18 +30,7 @@ CREATE USER konsent WITH
   NOREPLICATION;
 
 ALTER USER konsent SET search_path TO konsent_data, public;
-ALTER USER konsent WITH PASSWORD 'konsent';
-
-CREATE USER konsult WITH
-  LOGIN
-  NOSUPERUSER
-  INHERIT
-  NOCREATEDB
-  NOCREATEROLE
-  NOREPLICATION;
-
-ALTER USER konsult SET search_path TO konsult_data, public;
-ALTER USER konsult WITH PASSWORD 'konsult';
+ALTER USER konsent WITH PASSWORD 'Rud1R00B-db-konsent';
 
 CREATE USER kos WITH
   LOGIN
@@ -52,15 +41,7 @@ CREATE USER kos WITH
   NOREPLICATION;
 
 ALTER USER kos SET search_path TO kos_data, public;
-ALTER USER kos WITH PASSWORD 'kos';
-
-CREATE USER project WITH
-  LOGIN
-  NOSUPERUSER
-  INHERIT
-  NOCREATEDB
-  NOCREATEROLE
-  NOREPLICATION;
+ALTER USER kos WITH PASSWORD 'Rud1R00B-db-kos';
 
 CREATE USER selfdata WITH
   LOGIN
@@ -71,7 +52,7 @@ CREATE USER selfdata WITH
   NOREPLICATION;
 
 ALTER USER selfdata SET search_path TO selfdata_data, public;
-ALTER USER selfdata WITH PASSWORD 'selfdata';
+ALTER USER selfdata WITH PASSWORD 'Rud1R00B-db-selfdata';
 
 CREATE USER strukture WITH
   LOGIN
@@ -82,7 +63,7 @@ CREATE USER strukture WITH
   NOREPLICATION;
 
 ALTER USER strukture SET search_path TO strukture_data, public;
-ALTER USER strukture WITH PASSWORD 'strukture';
+ALTER USER strukture WITH PASSWORD 'Rud1R00B-db-strukture';
 
 CREATE USER template WITH
   LOGIN
@@ -93,7 +74,7 @@ CREATE USER template WITH
   NOREPLICATION;
 
 ALTER USER template SET search_path TO template_data, public;
-ALTER USER template WITH PASSWORD 'template';
+ALTER USER template WITH PASSWORD 'Rud1R00B-db-template';
 CREATE USER apigateway WITH
   LOGIN
   NOSUPERUSER
@@ -103,7 +84,7 @@ CREATE USER apigateway WITH
   NOREPLICATION;
 
 ALTER USER apigateway SET search_path TO apigateway_data, public;
-ALTER USER apigateway WITH PASSWORD 'apigateway';
+ALTER USER apigateway WITH PASSWORD 'Rud1R00B-db-apigateway';
 
 CREATE USER projekt WITH
   LOGIN
@@ -114,4 +95,4 @@ CREATE USER projekt WITH
   NOREPLICATION;
 
 ALTER USER projekt SET search_path TO projekt_data, public;
-ALTER USER projekt WITH PASSWORD 'projekt';
+ALTER USER projekt WITH PASSWORD 'Rud1R00B-db-projekt';

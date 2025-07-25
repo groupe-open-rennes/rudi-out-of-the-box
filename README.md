@@ -67,6 +67,8 @@ Vous pouvez lancer uniquement les services qui vous intéressent grâce à l'opt
 - Le CMS Magnolia : `http://magnolia.<votre_nom>`
 - Les services RUDI : `http://rudi.<votre_nom>/<service>`
 
+Vous trouverez l'ensemble des identifiants et mots de passe préconfigurés dans la [page dédiée](./documentation/identifiants.md)
+
 ### Les commandes utiles
 
 Besoin de tout arrêter (avec conservation des données saisies) ?

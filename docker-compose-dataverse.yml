@@ -17,7 +17,7 @@ services:
       - "LC_ALL=C.UTF-8"
       - "POSTGRES_DB=dataverse"
       - "POSTGRES_USER=dataverse"
-      - "POSTGRES_PASSWORD=dataverse_db_password"
+      - "POSTGRES_PASSWORD=Rud1R00B-db-dataverse"
       - "POSTGRES_PORT=5432"
     volumes:
       - ./config/dataverse-init/:/docker-entrypoint-initdb.d/
@@ -50,7 +50,7 @@ services:
       "root"
     ports:
       - "4848:4848"
-      - "8181:8181"
+      - "8081:8080"
     environment:
       - "CVM_SERVER_NAME=CESSDA" #Optional
       - "CVM_SERVER_URL=https://ns2.${base_dn}"
@@ -86,7 +86,7 @@ services:
       - "DATAVERSE_DB_HOST=dataverse-database"
       - "DATAVERSE_DB_PORT=5432"
       - "DATAVERSE_DB_USER=dataverse"
-      - "DATAVERSE_DB_PASSWORD=dataverse_db_password"
+      - "DATAVERSE_DB_PASSWORD=Rud1R00B-db-dataverse"
       - "DATAVERSE_DB_NAME=dataverse"
       - "PGPASSWORD"
       - "DATAVERSE_SERVICE_HOST"
