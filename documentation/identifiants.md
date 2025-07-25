@@ -10,8 +10,8 @@ Il est bien sûr fortement recommandé de modifier les différents mots de passe
 | Identifiant | Mot de passe | Type d'utilisateur |
 | ----------- | ------------ | ------------------ |
 | animateur@rennesmetropole.fr | Rud1R00B-animateur | Animateur |
-| reutilisateur@rennesmetropole.fr | Rud1R00B-reutilisateur | Porteur de projet / Membre de l'organisation "Ville de Rudi" |
-| participant1@rennesmetropole.fr | Rud1R00B-participant1 | Utilisateur / Membre de l'organisation "Ville de Rudi" |
+| reutilisateur@rennesmetropole.fr | Rud1R00B-reutilisateur | Porteur de projet / Administrateur de l'organisation "Ville de Rudi" |
+| participant1@rennesmetropole.fr | Rud1R00B-participant1 | Utilisateur / Administrateur de l'organisation "Ville de Rudi" |
 | participant2@rennesmetropole.fr | Rud1R00B-participant2 | Utilisateur / Membre de l'organisation "Ville de Rudi" |
 | participant3@rennesmetropole.fr | Rud1R00B-participant3 | Utilisateur / Membre de l'organisation "Ville de Rudi" |
 | participant4@rennesmetropole.fr | Rud1R00B-participant4 | Utilisateur / Membre de l'organisation "Ville de Rudi" |
@@ -29,50 +29,43 @@ Il est bien sûr fortement recommandé de modifier les différents mots de passe
 
 ## Utilisateurs fonctionnels (autres services)
 
-TODO 
-
-| Identifiant | Mot de passe | Service/type d'utilisateur | Informations de connexion (moteur de BDD, URI) |
+| Identifiant | Mot de passe | Service/type d'utilisateur | Informations de connexion (URL du service) |
 | ----------- | ------------ | --------------- | ---------------------------------------------- |
-||| Dataverse/administrateur | |
-||| Mailhog | |
-||| Magnolia/administrateur | |
-
-## Utilisateurs techniques (microservices)
-
-| Identifiant | Mot de passe |
-| ----------- | ------------ |
-| apigateway | microservice-apigateway |
-| projekt | microservice-projekt |
-| selfdata | microservice-selfdata |
-| strukture | microservice-strukture |
-| konsent | microservice-konsent |
-| selfdata-wso2-user | microservice-selfdata-wso2-user |
-| acl | microservice-acl |
-| kalim | microservice-kalim |
-| konsult | microservice-konsult |
-| kos | microservice-kos |
-
-## Identifiants de connexion aux bases de données
-
-| Identifiant | Mot de passe | Base de données/role | Informations de connexion (moteur de BDD, port) |
-| ----------- | ------------ | --------------- | ---------------------------------------------- |
-||| Magnolia | |
-||| Dataverse | |
-| rudi | Rud1R00B-db-rudi | RUDI/super utilisateur | postgres / port 35432 |
-| acl | Rud1R00B-db-acl | RUDI/ACL | postgres / utilisateur dédié au microservice ACL sur le schéma acl_data |
-| kalim | Rud1R00B-db-kalim | RUDI/KALIM | postgres / utilisateur dédié au microservice KALIM sur le schéma kalim_data |
-| konsent | Rud1R00B-db-konsent | RUDI/KONSENT | postgres / utilisateur dédié au microservice KONSENT sur le schéma konsent_data |
-| kos | Rud1R00B-db-kos | RUDI/KOS | postgres / utilisateur dédié au microservice KOS sur le schéma kos_data |
-| selfdata | Rud1R00B-db-selfdata | RUDI/SELFDATA | postgres / utilisateur dédié au microservice SELFDATA sur le schéma selfdata_data |
-| strukture | Rud1R00B-db-strukture | RUDI/STRUKTURE | postgres / utilisateur dédié au microservice STRUKTURE sur le schéma strukture_data |
-| template | Rud1R00B-db-template | RUDI/TEMPLATE | postgres / utilisateur non utilisé, sur le schéma template_data |
-| apigateway | Rud1R00B-db-apigateway | RUDI/APIGATEWAY | postgres / utilisateur dédié au microservice APIGATEWAY sur le schéma apigateway_data |
-| projekt | Rud1R00B-db-projekt | RUDI/PROJEKT | postgres / utilisateur dédié au microservice PROJEKT sur le schéma projekt_data |
+| dataverseAdmin | Rud1R00B-dvadmin | Dataverse/administrateur | http://dataverse.${base_dn}:8081/ |
+| rudi-mailhog | Rud1R00B-mh | Mailhog | http://rudi.${base_dn}:8025/ |
+| superuser | Rud1R00B-mgl-admin | Magnolia/administrateur | http://magnolia.${base_dn}:8082/ |
+| Editor | Rud1R00B-mgl-editor | Magnolia/Editeur des news | http://magnolia.${base_dn}:8082/ |
+| ProjectValues | Rud1R00B-mgl-pv | Magnolia/Editeur des project values | http://magnolia.${base_dn}:8082/ |
+| Terms | Rud1R00B-mgl-terms | Magnolia/Editeur des terms | http://magnolia.${base_dn}:8082/ |
+| Super User | Rud1R00B-mgl-su | Magnolia/administrateur | Utilisateur technique Magnolia, sans doit de connexion à l'IHM |
 
 ## Clés et token
 
+| Clé | Description | |
+| ----------- | ------------ | - |
+| 90276ddd-d283-4688-b13d-5aa147efb8b0 | API Dataverse | Validité : 23/07/2050 |
 
-| Clé | Description | 
-| ----------- | ------------ |
-|| API Dataverse |
+## Identifiants de connexion aux bases de données
+
+| Identifiant | Mot de passe | Role | Informations de connexion (moteur de BDD, base de données, port) |
+| ----------- | ------------ | --------------- | ---------------------------------------------- |
+| magnolia | Rud1R00B-db-magnolia | Magnolia | postgres / magnolia / port 35434 |
+| dataverse | Rud1R00B-db-dataverse | Dataverse | postgres / dataverse / port 35433 |
+| rudi | Rud1R00B-db-rudi | super utilisateur | postgres / rudi / port 35432 |
+
+## Utilisateurs techniques (microservices)
+
+| Identifiant | Mot de passe | Mot de passe base de données | Schéma de base de données |
+| ----------- | ------------ | ---------------------------- | ------------------------- |
+| apigateway | microservice-apigateway | Rud1R00B-db-apigateway | apigateway_data |
+| projekt | microservice-projekt | Rud1R00B-db-projekt | projekt_data |
+| selfdata | microservice-selfdata | Rud1R00B-db-selfdata | selfdata_data |
+| selfdata-wso2-user | microservice-selfdata-wso2-user | - | - |
+| strukture | microservice-strukture | Rud1R00B-db-strukture | strukture_data |
+| konsent | microservice-konsent | Rud1R00B-db-konsent | konsent_data |
+| acl | microservice-acl | Rud1R00B-db-acl | acl_data |
+| kalim | microservice-kalim | Rud1R00B-db-kalim | kalim_data |
+| konsult | microservice-konsult | - | - |
+| kos | microservice-kos | Rud1R00B-db-kos | kos_data |
+| template | | Rud1R00B-db-template | postgres / utilisateur non utilisé, sur le schéma template_data |
 
