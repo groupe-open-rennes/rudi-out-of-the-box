@@ -125,6 +125,12 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 └── .env : Exemple de fichier d'environnement
 ```
 
+## Procédures spécifiques
+
+- [Comment passer une instance Roob en production ?](./documentation/cookbook/roob-to-prod.md)
+- [Comment mettre en place un certificat SSL pour traefik ?](./documentation/cookbook/treafik-certificat-ssl.md)
+- [Comment passer de traefik à Apache ?](./documentation/cookbook/treafik-to-apache.md)
+- [Comment configurer les logs ?](./documentation/cookbook/configuration-logs.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
