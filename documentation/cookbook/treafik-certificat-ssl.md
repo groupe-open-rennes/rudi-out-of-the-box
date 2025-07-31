@@ -1,7 +1,5 @@
 # Comment mettre en place un certificat SSL pour traefik ?
 
-# Comment mettre en place un certificat SSL pour traefik ?
-
 - Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires *certs*
 
 - Déposer dans ce répertoire les fichiers CRT et KEY de votre certificat (dans l'exemple ci-après rudi.crt et rudi.key)
