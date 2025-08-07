@@ -1,10 +1,10 @@
 # Comment mettre en place un certificat SSL pour traefik ?
 
-- Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires *certs*
+- Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires ``certs``
 
 - Déposer dans ce répertoire les fichiers CRT et KEY de votre certificat (dans l'exemple ci-après rudi.crt et rudi.key)
 
-- Créer dans le répertoire *rudi-out-of-the-box* un fichier *treafik.yml* avec pour contenu :
+- Créer dans le répertoire *rudi-out-of-the-box* un fichier ``treafik.yml`` avec pour contenu :
 
 ```
 api:
@@ -56,7 +56,7 @@ tls:
 
 > Les chemins indiqués sont ceux relatifs au conteneur traefik.
 
-- Editer le fichier *docker-compose-network.yml*
+- Editer le fichier ``docker-compose-network.yml``
 
 - Modifier le section *reverse-proxy* comme suit :
 
@@ -79,8 +79,8 @@ services:
 **Notes :** 
 
 > Les éléments importants sont :
-> - le volume **./certs** qui permet au container d'accéder au certificat
-> - le volume **./traefik.yml** qui permet container d'accéder à la configuration Traefik
+> - le volume ``./certs`` qui permet au container d'accéder au certificat
+> - le volume ``./traefik.yml`` qui permet container d'accéder à la configuration Traefik
 
 - Pour chaque section correspondant à un container ajouter les éléments suivants :
 
