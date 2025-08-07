@@ -323,6 +323,7 @@ Créez un fichier ``apache/httpd.conf`` qui charge les modules nécessaires et i
 ```
 # Modules nécessaires
 LoadModule mpm_event_module modules/mod_mpm_event.so
+LoadModule alias_module modules/mod_alias.so
 LoadModule ssl_module modules/mod_ssl.so
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
@@ -357,8 +358,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName rudi.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
+    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
 
     # Règle par défaut pour portail
     ProxyPass / http://portail:8080/
@@ -422,8 +423,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName solr.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
+    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
 
     ProxyPass / http://solr:8983/
     ProxyPassReverse / http://solr:8983/
@@ -432,8 +433,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName dataverse.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
+    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
 
     ProxyPass / http://dataverse:8080/
     ProxyPassReverse / http://dataverse:8080/
@@ -442,8 +443,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName magnolia.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
+    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
 
     ProxyPass / http://magnolia:8080/
     ProxyPassReverse / http://magnolia:8080/
