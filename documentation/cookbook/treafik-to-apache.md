@@ -322,6 +322,7 @@ Créez un fichier ``apache/httpd.conf`` qui charge les modules nécessaires et i
 
 ```
 # Modules nécessaires
+LoadModule mpm_event_module modules/mod_mpm_event.so
 LoadModule ssl_module modules/mod_ssl.so
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
@@ -343,8 +344,6 @@ SSLHonorCipherOrder on
 SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
 SSLProxyProtocol all -SSLv3 -TLSv1 -TLSv1.1
 SSLPassPhraseDialog  builtin
-SSLSessionCache        "shmcb:/usr/local/apache2/logs/ssl_scache(512000)"
-SSLSessionCacheTimeout  300
 ```
 
 Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles de routage similaires à celles de Traefik:
