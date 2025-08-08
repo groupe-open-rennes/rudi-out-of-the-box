@@ -121,26 +121,98 @@ Le contenu type de ce fichier est le suivant :
     ProxyPass /robots.txt https://localhost:8087/konsult/v1/robots/robots
     ProxyPassReverse /robots.txt https://localhost:8087/konsult/v1/robots/robots
 
+    ProxyPass /acl/swagger-ui.html https://localhost:8085/acl/swagger-ui.html
+    ProxyPassReverse /acl/swagger-ui.html https://localhost:8085/acl/swagger-ui.html
+
+    ProxyPass /acl/swagger-ui https://localhost:8085/acl/swagger-ui
+    ProxyPassReverse /acl/swagger-ui https://localhost:8085/acl/swagger-ui
+
+    ProxyPass /acl/v3/api-docs https://localhost:8085/acl/v3/api-docs
+    ProxyPassReverse /acl/v3/api-docs https://localhost:8085/acl/v3/api-docs
+
     ProxyPass /acl https://localhost:8082/acl
     ProxyPassReverse /acl https://localhost:8082/acl
+
+    ProxyPass /kalim/swagger-ui.html https://localhost:8086/kalim/swagger-ui.html
+    ProxyPassReverse /kalim/swagger-ui.html https://localhost:8086/kalim/swagger-ui.html
+
+    ProxyPass /kalim/swagger-ui https://localhost:8086/kalim/swagger-ui
+    ProxyPassReverse /kalim/swagger-ui https://localhost:8086/kalim/swagger-ui
+
+    ProxyPass /kalim/v3/api-docs https://localhost:8086/kalim/v3/api-docs
+    ProxyPassReverse /kalim/v3/api-docs https://localhost:8086/kalim/v3/api-docs
 
     ProxyPass /kalim https://localhost:8082/kalim
     ProxyPassReverse /kalim https://localhost:8082/kalim
 
+    ProxyPass /konsent/swagger-ui.html https://localhost:8091/konsent/swagger-ui.html
+    ProxyPassReverse /konsent/swagger-ui.html https://localhost:8091/konsent/swagger-ui.html
+
+    ProxyPass /konsent/swagger-ui https://localhost:8091/konsent/swagger-ui
+    ProxyPassReverse /konsent/swagger-ui https://localhost:8091/konsent/swagger-ui
+
+    ProxyPass /konsent/v3/api-docs https://localhost:8091/konsent/v3/api-docs
+    ProxyPassReverse /konsent/v3/api-docs https://localhost:8091/konsent/v3/api-docs
+
     ProxyPass /konsent https://localhost:8082/konsent
     ProxyPassReverse /konsent https://localhost:8082/konsent
+
+    ProxyPass /konsult/swagger-ui.html https://localhost:8087/konsult/swagger-ui.html
+    ProxyPassReverse /konsult/swagger-ui.html https://localhost:8087/konsult/swagger-ui.html
+
+    ProxyPass /konsult/swagger-ui https://localhost:8087/konsult/swagger-ui
+    ProxyPassReverse /konsult/swagger-ui https://localhost:8087/konsult/swagger-ui
+
+    ProxyPass /konsult/v3/api-docs https://localhost:8087/konsult/v3/api-docs
+    ProxyPassReverse /konsult/v3/api-docs https://localhost:8087/konsult/v3/api-docs
 
     ProxyPass /konsult https://localhost:8082/konsult
     ProxyPassReverse /konsult https://localhost:8082/konsult
 
+    ProxyPass /kos/swagger-ui.html https://localhost:8093/kos/swagger-ui.html
+    ProxyPassReverse /kos/swagger-ui.html https://localhost:8093/kos/swagger-ui.html
+
+    ProxyPass /kos/swagger-ui https://localhost:8093/kos/swagger-ui
+    ProxyPassReverse /kos/swagger-ui https://localhost:8093/kos/swagger-ui
+
+    ProxyPass /kos/v3/api-docs https://localhost:8093/kos/v3/api-docs
+    ProxyPassReverse /kos/v3/api-docs https://localhost:8093/kos/v3/api-docs
+
     ProxyPass /kos https://localhost:8082/kos
     ProxyPassReverse /kos https://localhost:8082/kos
+
+    ProxyPass /projekt/swagger-ui.html https://localhost:8089/projekt/swagger-ui.html
+    ProxyPassReverse /projekt/swagger-ui.html https://localhost:8089/projekt/swagger-ui.html
+
+    ProxyPass /projekt/swagger-ui https://localhost:8089/projekt/swagger-ui
+    ProxyPassReverse /projekt/swagger-ui https://localhost:8089/projekt/swagger-ui
+
+    ProxyPass /projekt/v3/api-docs https://localhost:8089/projekt/v3/api-docs
+    ProxyPassReverse /projekt/v3/api-docs https://localhost:8089/projekt/v3/api-docs
 
     ProxyPass /projekt https://localhost:8082/projekt
     ProxyPassReverse /projekt https://localhost:8082/projekt
 
+    ProxyPass /selfdata/swagger-ui.html https://localhost:8090/selfdata/swagger-ui.html
+    ProxyPassReverse /selfdata/swagger-ui.html https://localhost:8090/selfdata/swagger-ui.html
+
+    ProxyPass /selfdata/swagger-ui https://localhost:8090/selfdata/swagger-ui
+    ProxyPassReverse /selfdata/swagger-ui https://localhost:8090/selfdata/swagger-ui
+
+    ProxyPass /selfdata/v3/api-docs https://localhost:8090/selfdata/v3/api-docs
+    ProxyPassReverse /selfdata/v3/api-docs https://localhost:8090/selfdata/v3/api-docs
+
     ProxyPass /selfdata https://localhost:8082/selfdata
     ProxyPassReverse /selfdata https://localhost:8082/selfdata
+
+    ProxyPass /strukture/swagger-ui.html https://localhost:8084/strukture/swagger-ui.html
+    ProxyPassReverse /strukture/swagger-ui.html https://localhost:8084/strukture/swagger-ui.html
+
+    ProxyPass /strukture/swagger-ui https://localhost:8084/strukture/swagger-ui
+    ProxyPassReverse /strukture/swagger-ui https://localhost:8084/strukture/swagger-ui
+
+    ProxyPass /strukture/v3/api-docs https://localhost:8084/strukture/v3/api-docs
+    ProxyPassReverse /strukture/v3/api-docs https://localhost:8084/strukture/v3/api-docs
 
     ProxyPass /strukture https://localhost:8082/strukture
     ProxyPassReverse /strukture https://localhost:8082/strukture
@@ -182,7 +254,7 @@ Le contenu type de ce fichier est le suivant :
 ### Exposition des services Docker
 
 Il est nécessaire dans cette configuration Apache de permettre l'accès aux services docker depuis Apache2.
-En conséquence, il est nécessaire d'exposer le port 8080 (port interne) des différents containers (microservice et magnolia) sur un port externe (tous les ports doivent être différents) dans les fichiers ``docker-compose-rudi.yml`` et ``docker-compose-magnolia.yml``.
+En conséquence, il est nécessaire d'exposer le port 8080 (port interne) des différents containers (microservice et magnolia) sur un port externe (tous les ports doivent être différents) dans les fichiers **docker-compose-rudi.yml** et **docker-compose-magnolia.yml**.
 Vous pouvez vous reporter au fichier ``rudi_ssl.conf`` ci-dessous pour les différents ports.
 
 ### Gestion des sites actifs
@@ -209,12 +281,9 @@ systemctl reload apache2
 
 **Remarques :**
 Lors du démarrage du portail la commande ``docker compose`` n'est plus :
-
-``` docker compose -f ./docker-compose-magnolia.yml -f ./docker-compose-rudi.yml -f ./docker-compose-dataverse.yml -f ./docker-compose-network.yml up -d```
-
+`` docker compose -f ./docker-compose-magnolia.yml -f ./docker-compose-rudi.yml -f ./docker-compose-dataverse.yml -f ./docker-compose-network.yml up -d``
 Mais
-
-```docker compose -f ./docker-compose-magnolia.yml -f ./docker-compose-rudi.yml -f ./docker-compose-dataverse.yml up -d```
+``docker compose -f ./docker-compose-magnolia.yml -f ./docker-compose-rudi.yml -f ./docker-compose-dataverse.yml up -d``
 
 
 ## Mettre en place Apache2 dans la structure docker compose
@@ -223,18 +292,18 @@ Les opérations à réaliser pour remplacer Traefik par Apache2 sont les suivant
 
 ### Création des répertoires de configuration
 
-- Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoire ``certs``
+- Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoire *certs*
 
 - Déposer dans ce répertoire les fichiers CRT et KEY de votre certificat (dans l'exemple ci-après rudi.crt et rudi.key)
 
 - Créer dans le répertoire *rudi-out-of-the-box* les sous-repértoires :
-  - ``apache``
-  - ``apache/extra``
-  - ``apache/log``
+  - *apache*
+  - *apache/extra*
+  - *apache/log*  
 
 ### Modification du fichier docker-compose-network.yml
 
-Remplacer le contenu du fichier ``docker-compose-network.yml`` part :
+Remplacer le contenu du fichier ``docker-compose-network.yml`` par :
 
 ```
 ---
@@ -318,38 +387,46 @@ networks:
 
 ### Fichier de configuration Apache2
 
-Créez un fichier ``apache/httpd.conf`` qui charge les modules nécessaires et inclut les configurations additionnelles:
+Générer le squelette du fichier ``httpd.conf`` et  ``conf/extra/httpd-vhosts.conf``  grace aux commandes suivantes :
+
+```
+docker run --rm httpd:2.4 cat /usr/local/apache2/conf/httpd.conf >  apache/httpd.conf
+
+docker run --rm httpd:2.4 cat /usr/local/apache2/conf/extra/httpd-ssl.conf >  apache/extra/httpd-ssl.conf
+```
+
+Inclure les configuration additionnelles en activant les modules suivants dans ``httpd.conf`` :
 
 ```
 # Modules nécessaires
-LoadModule mpm_event_module modules/mod_mpm_event.so
-LoadModule alias_module modules/mod_alias.so
 LoadModule ssl_module modules/mod_ssl.so
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 LoadModule rewrite_module modules/mod_rewrite.so
 LoadModule headers_module modules/mod_headers.so
+```
 
+Inclure les configuration additionnelles en activant les éléments suivants dans ``httpd.conf``:
+
+```
 # Inclure les configurations SSL et virtualhost
 Include conf/extra/httpd-ssl.conf
 Include conf/extra/httpd-vhosts.conf
 ```
 
-Créez un fichier ``apache/extra/httpd-ssl.conf`` pour la configuration SSL:
+Modifier dans le fichier ``conf/extra/https-ssl.conf`` les 2 lignes suivantes :
 
 ```
-Listen 443
-SSLCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
-SSLProxyCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
-SSLHonorCipherOrder on
-SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
-SSLProxyProtocol all -SSLv3 -TLSv1 -TLSv1.1
-SSLPassPhraseDialog  builtin
+SSLCertificateFile "/usr/local/apache2/extra/rudi.crt"
+
+SSLCertificateKeyFile "/usr/local/apache2/extra/rudi.key"
 ```
 
 Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles de routage similaires à celles de Traefik:
 
 ```
+${base_dn}
+
 <VirtualHost *:80>
     ServerName rudi.${base_dn}
     Redirect permanent / https://rudi.${base_dn}/
@@ -358,8 +435,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName rudi.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
+    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
 
     # Règle par défaut pour portail
     ProxyPass / http://portail:8080/
@@ -423,8 +500,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName solr.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
+    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
 
     ProxyPass / http://solr:8983/
     ProxyPassReverse / http://solr:8983/
@@ -433,8 +510,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName dataverse.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
+    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
 
     ProxyPass / http://dataverse:8080/
     ProxyPassReverse / http://dataverse:8080/
@@ -443,8 +520,8 @@ Créez un fichier ``apache/extra/httpd-vhosts.conf`` pour configurer les règles
 <VirtualHost *:443>
     ServerName magnolia.${base_dn}
     SSLEngine on
-    SSLCertificateFile "/usr/local/apache2/certs/rudi.crt"
-    SSLCertificateKeyFile "/usr/local/apache2/certs/rudi.key"
+    SSLCertificateFile "/usr/local/apache2/certs/server.crt"
+    SSLCertificateKeyFile "/usr/local/apache2/certs/server.key"
 
     ProxyPass / http://magnolia:8080/
     ProxyPassReverse / http://magnolia:8080/
