@@ -1,8 +1,5 @@
 # Comment passer une instance Roob en production ?
 
-**Table des matières**
-[[TOC]]
-
 ## Prérequis
 
 - Serveur Linux (Ubuntu/Debian recommandé)
@@ -141,6 +138,11 @@ services:
       - portail
 ```
 
+**Attention **:
+
+- Assurez-vous que les répertoires des volumes persistants ont les bonnes permissions pour éviter des problèmes d'accès.
+
+
 ## Gestion des mots de passe
 
 Afin de pouvoir passer en production, il est nécessaire de modifier les mots de passe :
@@ -273,3 +275,13 @@ Il est nécessaire :
 - de mettre à jour les fichiers de propriétés  ``./config/apigateway/apigateway.properties``.
 
 > encryption-key.jks.default-key-password=<mot de passe>
+
+## Pour aller plus loin
+
+### Gestion des sauvegardes :
+
+N'oublier pas de mettre en place une politique de sauvegarde pour les bases de données et les index des différents services.
+
+### Surveillance et logs :
+
+N'oublier pas de mettre en place une configuration idoine des logs ainsi qu'un supervision des services.
