@@ -106,7 +106,6 @@ services:
 
 Le volume des index est déjà exposé dans la section *volumes* du service *magnolia*.
 
-
 ### Portail
 
 Le fichier ``docker-compose-rudi.yml`` doit être modifié afin de rendre les volumes persistants pour la base de données PostgreSQL.
@@ -248,10 +247,13 @@ Il est nécessaire :
 - de mettre à jour les fichiers de propriétés  ``./config/konsent/konsent.properties``.
 
 > rudi.pdf.sign.keyStorePassword=<mot de passe consentement>
+
 > rudi.pdf.sign.keyStoreKeyPassword=<mot de passe consentement>
 
 > rudi.consent.validate.sha.salt=<salt>
+
 > rudi.consent.revoke.sha.salt=<salt>
+
 > rudi.treatmentversion.publish.sha.salt=<salt>
 
 ### Gestion du keystore des données personnelles
