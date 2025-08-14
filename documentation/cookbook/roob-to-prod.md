@@ -138,7 +138,7 @@ services:
       - portail
 ```
 
-**Attention **:
+**Attention :**
 
 - Assurez-vous que les répertoires des volumes persistants ont les bonnes permissions pour éviter des problèmes d'accès.
 
