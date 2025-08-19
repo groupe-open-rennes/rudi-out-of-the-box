@@ -31,12 +31,12 @@ Il est bien sûr fortement recommandé de modifier les différents mots de passe
 
 | Identifiant | Mot de passe | Service/type d'utilisateur | Informations de connexion (URL du service) |
 | ----------- | ------------ | --------------- | ---------------------------------------------- |
-| dataverseAdmin | Rud1R00B-dvadmin | Dataverse/administrateur | http://dataverse.${base_dn}:8081/ |
+| dataverseAdmin | Rud1R00B-dvadmin | Dataverse/administrateur | http://dataverse.${base_dn}/ |
 | rudi-mailhog | Rud1R00B-mh | Mailhog | http://rudi.${base_dn}:8025/ |
-| superuser | Rud1R00B-mgl-admin | Magnolia/administrateur | http://magnolia.${base_dn}:8082/ |
-| Editor | Rud1R00B-mgl-editor | Magnolia/Editeur des news | http://magnolia.${base_dn}:8082/ |
-| ProjectValues | Rud1R00B-mgl-pv | Magnolia/Editeur des project values | http://magnolia.${base_dn}:8082/ |
-| Terms | Rud1R00B-mgl-terms | Magnolia/Editeur des terms | http://magnolia.${base_dn}:8082/ |
+| superuser | Rud1R00B-mgl-admin | Magnolia/administrateur | http://magnolia.${base_dn}/ |
+| Editor | Rud1R00B-mgl-editor | Magnolia/Editeur des news | http://magnolia.${base_dn}/ |
+| ProjectValues | Rud1R00B-mgl-pv | Magnolia/Editeur des project values | http://magnolia.${base_dn}/ |
+| Terms | Rud1R00B-mgl-terms | Magnolia/Editeur des terms | http://magnolia.${base_dn}/ |
 | Super User | Rud1R00B-mgl-su | Magnolia/administrateur | Utilisateur technique Magnolia, sans doit de connexion à l'IHM |
 
 ## Clés et token
