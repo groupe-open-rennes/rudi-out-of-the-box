@@ -60,7 +60,6 @@ Il est bien sûr fortement recommandé de modifier les différents mots de passe
 | apigateway | microservice-apigateway | Rud1R00B-db-apigateway | apigateway_data |
 | projekt | microservice-projekt | Rud1R00B-db-projekt | projekt_data |
 | selfdata | microservice-selfdata | Rud1R00B-db-selfdata | selfdata_data |
-| selfdata-wso2-user | microservice-selfdata-wso2-user | - | - |
 | strukture | microservice-strukture | Rud1R00B-db-strukture | strukture_data |
 | konsent | microservice-konsent | Rud1R00B-db-konsent | konsent_data |
 | acl | microservice-acl | Rud1R00B-db-acl | acl_data |
