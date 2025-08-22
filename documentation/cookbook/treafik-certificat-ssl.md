@@ -4,7 +4,7 @@
 
 - Déposer dans ce répertoire les fichiers CRT et KEY de votre certificat (dans l'exemple ci-après rudi.crt et rudi.key)
 
-- Créer dans le répertoire *rudi-out-of-the-box* un fichier ``treafik.yml`` avec pour contenu :
+- Créer dans le répertoire *rudi-out-of-the-box* un fichier ``traefik.yml`` avec pour contenu :
 
 ```
 api:
