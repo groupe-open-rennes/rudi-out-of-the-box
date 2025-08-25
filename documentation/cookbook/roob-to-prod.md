@@ -20,11 +20,14 @@ Le fichier ``docker-compose-dataverse.yml`` doit être modifié afin de rendre l
 
 #### Dataverse - Postgresql
 
-Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires *./database-data/dataverse*
+Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoire *./database-data/dataverse*
 
 Copier le contenu du répertoire du conteneur ``/var/lib/postgresql/data/`` dans le répertoire ``./database-data/dataverse``.
 
+
+> ```bash 
 > docker compose cp postgres:/var/lib/postgresql/data/ ./database-data/dataverse
+> ```
 
 Exposer le volume des données pour la base de données en modifiant la section ``volumes``:
 
@@ -43,7 +46,7 @@ services:
       - "LC_ALL=C.UTF-8"
       - "POSTGRES_DB=dataverse"
       - "POSTGRES_USER=dataverse"
-      - "POSTGRES_PASSWORD=dataverse_db_password"
+      - "POSTGRES_PASSWORD=Rud1R00B-db-dataverse"
       - "POSTGRES_PORT=5432"
     env_file:
       - data/dataverse/.env
@@ -66,11 +69,13 @@ Le fichier ``docker-compose-magnolia.yml`` doit être modifié afin de rendre le
 
 #### Magnolia - Postgresql
 
-Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires *./database-data/magnolia*
+Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoire *./database-data/magnolia*
 
 Copier le contenu du répertoire du conteneur ``/var/lib/postgresql/data/`` dans le répertoire ``./database-data/magnolia``.
 
+> ```bash 
 > docker compose cp magnolia-database:/var/lib/postgresql/data/ ./database-data/magnolia
+> ```
 
 Exposer le volume des données pour la base de données en modifiant la section ``volumes``:
 
@@ -84,7 +89,7 @@ services:
     environment:
       - "POSTGRES_DB=magnolia"
       - "POSTGRES_USER=magnolia"
-      - "POSTGRES_PASSWORD=magnolia"
+      - "POSTGRES_PASSWORD=Rud1R00B-db-magnolia"
       - "POSTGRES_PORT=5432"
     healthcheck:
       test: ["CMD", "pg_isready"]
@@ -113,7 +118,9 @@ Créer dans le répertoire *rudi-out-of-the-box* un sous-répertoires *./databas
 
 Copier le contenu du répertoire du conteneur ``/var/lib/postgresql/data/`` dans le répertoire ``./database-data/rudi``.
 
+> ```bash 
 > docker compose cp database:/var/lib/postgresql/data/ ./database-data/rudi
+> ```
 
 Exposer le volume des données pour la base de données en modifiant la section ``volumes``:
 
@@ -124,7 +131,7 @@ services:
     environment:
       - POSTGRES_USER=rudi
       - POSTGRES_PASSWORD=rudi
-      - POSTGRES_DB=rudi
+      - POSTGRES_DB=Rud1R00B-db-rudi
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB -h database"]
       interval: 30s
@@ -162,11 +169,11 @@ Modifier le fichier ``docker-compose-dataverse.yml`` et notamment les variables 
 
 - Dans le service ``postgres`` :
 
->      - "POSTGRES_PASSWORD=dataverse_db_password"
+>      - "POSTGRES_PASSWORD=Rud1R00B-db-dataverse"
 
 - Dans le service ``dataverse`` :
 
->      - "DATAVERSE_DB_PASSWORD=dataverse_db_password"
+>      - "DATAVERSE_DB_PASSWORD=Rud1R00B-db-dataverse"
 
 #### Mot de passe - Base de données - Magnolia
 
@@ -175,22 +182,22 @@ Modifier le mot de passe de l'utilisateur *magnolia*
 
 - Dans le service ``magnolia-database`` :
 
->      - "POSTGRES_PASSWORD=magnolia"
+>      - "POSTGRES_PASSWORD=Rud1R00B-db-magnolia"
 
 - Dans le service ``magnolia`` :
 
->      - "MAGNOLIA_BDD_PASSWORD=magnolia"
+>      - "MAGNOLIA_BDD_PASSWORD=Rud1R00B-db-magnolia"
 
 #### Mot de passe - Base de données - RUDI
 
 Se connecter sur la base de données RUDI.
-Modifier le mot de passe des utilisateurs *rudi*, *acl*, *apigateway*, *kalim*, *konsent*, *kos*, *projekt*, *selfdata*, *strukture*
+- Modifier le mot de passe des utilisateurs *rudi*, *acl*, *apigateway*, *kalim*, *konsent*, *kos*, *projekt*, *selfdata*, *strukture*
 
-- Dans le service ``database`` :
+- Dans le service ``database``, renseigner le nouveau mot de passe de l'utilisateur `rudi` :
 
->      - POSTGRES_PASSWORD="rudi"
+>      - POSTGRES_PASSWORD="Rud1R00B-db-rudi"
 
-Editer les fichier ``./config/<nom du micro service>/<nom du micro service>.properties`` et mettre à jour les propriétés ``spring.datasource.password=xxx``
+Editer les fichier ``./config/<nom du micro service>/<nom du micro service>.properties`` et mettre à jour les propriétés ``spring.datasource.password=xxx`` avec les nouveaux mots de passe des utilisateurs concernés.
 
 ## Mot de passe - Utilisateurs
 
@@ -284,4 +291,4 @@ N'oublier pas de mettre en place une politique de sauvegarde pour les bases de d
 
 ### Surveillance et logs :
 
-N'oublier pas de mettre en place une configuration idoine des logs ainsi qu'un supervision des services.
+N'oublier pas de mettre en place une configuration idoine des logs ainsi qu'une supervision des services.
