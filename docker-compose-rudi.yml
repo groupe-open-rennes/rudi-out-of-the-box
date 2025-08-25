@@ -13,7 +13,7 @@ services:
       - 35432:5432
     environment:
       - POSTGRES_USER=rudi
-      - POSTGRES_PASSWORD=rudi
+      - POSTGRES_PASSWORD=Rud1R00B-db-rudi
       - POSTGRES_DB=rudi
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB -h database"]
