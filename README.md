@@ -43,6 +43,8 @@ Jetez un œil au fichier `.env` :
 <ip> dataverse.<votre_nom> magnolia.<votre_nom> rudi.<votre_nom>
 ```
 
+Veuillez également consulter le document [Comment changer de host dans Magnolia ?](./documentation/cookbook/configuration-magnolia.md)
+
 ### 3. Lancez les services
 
 Une seule commande pour tout démarrer :
@@ -66,6 +68,8 @@ Vous pouvez lancer uniquement les services qui vous intéressent grâce à l'opt
 - Le catalogue Dataverse : `http://dataverse.<votre_nom>`
 - Le CMS Magnolia : `http://magnolia.<votre_nom>`
 - Les services RUDI : `http://rudi.<votre_nom>/<service>`
+
+Vous trouverez l'ensemble des identifiants et mots de passe préconfigurés dans la [page dédiée](./documentation/identifiants.md)
 
 ### Les commandes utiles
 
@@ -125,6 +129,13 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 └── .env : Exemple de fichier d'environnement
 ```
 
+## Procédures spécifiques
+
+- [Comment passer une instance Roob en production ?](./documentation/cookbook/roob-to-prod.md)
+- [Comment mettre en place un certificat SSL pour traefik ?](./documentation/cookbook/treafik-certificat-ssl.md)
+- [Comment passer de traefik à Apache ?](./documentation/cookbook/treafik-to-apache.md)
+- [Comment configurer les logs ?](./documentation/cookbook/configuration-logs.md)
+- [Comment changer de host dans Magnolia ?](./documentation/cookbook/configuration-magnolia.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
