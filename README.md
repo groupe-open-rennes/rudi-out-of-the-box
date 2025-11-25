@@ -137,6 +137,7 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment configurer les logs ?](./documentation/cookbook/configuration-logs.md)
 - [Comment changer de host dans Magnolia ?](./documentation/cookbook/configuration-magnolia.md)
 - [Comment configurer l'envoi de mails ?](./documentation/cookbook/configuration-mail.md)
+- [Comment faire persister mes données ?](./documentation/cookbook/persistance-donnees.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
