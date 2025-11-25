@@ -136,6 +136,7 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment passer de traefik à Apache ?](./documentation/cookbook/treafik-to-apache.md)
 - [Comment configurer les logs ?](./documentation/cookbook/configuration-logs.md)
 - [Comment changer de host dans Magnolia ?](./documentation/cookbook/configuration-magnolia.md)
+- [Comment configurer l'envoi de mails ?](./documentation/cookbook/configuration-mail.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
