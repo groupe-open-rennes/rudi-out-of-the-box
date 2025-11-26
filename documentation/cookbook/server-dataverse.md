@@ -21,9 +21,9 @@ Conserver uniquement l'arborescence nécessaire pour `dataverse` :
 ```
 ├── .env
 ├── config
-│   ├── dataverse-init
+│   └── dataverse-init
 ├── data
-│   ├── dataverse
+│   └── dataverse
 ├── docker-compose-dataverse.yml
 ├── docker-compose-network.yml
 └── image
@@ -70,9 +70,9 @@ Supprimer les répertoires et fichiers de dataverse :
 
 ```
 ├── config
-│   ├── dataverse-init
+│   └── dataverse-init
 ├── data
-│   ├── dataverse
+│   └── dataverse
 ├── docker-compose-network.yml
 └── image
     └── dataverse

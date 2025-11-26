@@ -139,6 +139,8 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment configurer l'envoi de mails ?](./documentation/cookbook/configuration-mail.md)
 - [Comment faire persister mes données (RUDI, Dataverse, Magnolia) ?](./documentation/cookbook/data-persistence.md)
 - [Comment séparer le déploiement de Dataverse sur un autre serveur ?](./documentation/cookbook/server-dataverse.md)
+- [Comment séparer le déploiement d'un des microservices RUDI sur un autre serveur ?](./documentation/cookbook/server-microservice-rudi.md)
+- [Comment utiliser un serveur de base de données séparé ?](./documentation/cookbook/server-database.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
