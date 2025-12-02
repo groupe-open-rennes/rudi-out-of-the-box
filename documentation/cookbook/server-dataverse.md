@@ -52,13 +52,15 @@ Vérifier que l'accès à Dataverse fonctionne depuis la machine hébergeant les
 
 ## Modifier la configuration des microservices
 
+Les opérations suivantes sont à faire sur la machine hébergeant les services RUDI.
+
 Modifier la propriété suivante pour les microservices qui utilisent dataverse :
 
 ``` properties
 dataverse.api.url=http://dataverse.<votre_nom>/api
 ```
 
-dans les fichiers :
+Les fichiers concernés sont :
 * `apigateway.properties`
 * `kalim.properties`
 * `konsult.properties`

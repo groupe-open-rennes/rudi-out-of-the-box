@@ -60,13 +60,15 @@ docker compose -f .\docker-compose-database.yml up -d
 
 ## Modifier la configuration des services RUDI
 
+Les opérations suivantes sont à faire sur la machine hébergeant les services RUDI.
+
 Modifier la propriété suivante pour les microservices qui utilisent la base de données RUDI :
 
 ``` properties
 spring.datasource.url=jdbc:postgresql://<ip_ou_hostname_serveur_db>:5432/rudi
 ```
 
-dans les fichiers :
+Les fichiers concernés sont :
 * `acl.properties`
 * `apigateway.properties`
 * `kalim.properties`
