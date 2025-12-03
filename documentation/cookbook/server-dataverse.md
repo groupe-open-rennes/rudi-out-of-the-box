@@ -2,11 +2,15 @@
 
 _Cas d'usage_ : je souhaite déployer dataverse sur un serveur dédié.
 
-## Déployer le serveur dataverse
+Dans ce document, les dénominations suivantes sont utilisées :
+* *ROOB_RUDI* : machine hébergeant les services RUDI (microservices, database, Magnolia, mailhog)
+* *ROOB_DATAVERSE* : machine dédiée hébergeant dataverse
+
+## Déployer dataverse sur le serveur *ROOB_DATAVERSE*
 
 La première étape consiste à faire tourner le container de `dataverse` sur le serveur dédié.
 
-Pour cela, récupérer le projet ROOB
+Pour cela, sur le serveur *ROOB_DATAVERSE* récupérer le projet ROOB
 
 ```bash
 git clone https://github.com/rudi-platform/rudi-out-of-the-box.git
@@ -41,23 +45,23 @@ docker compose -f .\docker-compose-dataverse.yml -f .\docker-compose-network.yml
 ```
 
 
-Vérifier que l'accès à Dataverse fonctionne depuis la machine hébergeant les services RUDI : `http://dataverse.<votre_nom>`.
+Vérifier que l'accès à Dataverse fonctionne depuis la machine hébergeant les services RUDI *ROOB_RUDI* : `http://dataverse.<ROOB_DATAVERSE>`.
 
 
 > Ajouter l'IP de dataverse dans le fichier hosts de la machine hébergeant les services RUDI si nécessaire.
 >    ```
->    <ip> dataverse.<votre_nom>
+>    <ip> dataverse.<ROOB_DATAVERSE>
 >    ```
 
 
-## Modifier la configuration des microservices
+## Modifier la configuration des microservices sur le serveur *ROOB_RUDI*
 
-Les opérations suivantes sont à faire sur la machine hébergeant les services RUDI.
+Les opérations suivantes sont à faire sur la machine *ROOB_RUDI*.
 
 Modifier la propriété suivante pour les microservices qui utilisent dataverse :
 
 ``` properties
-dataverse.api.url=http://dataverse.<votre_nom>/api
+dataverse.api.url=http://dataverse.<ROOB_DATAVERSE>/api
 ```
 
 Les fichiers concernés sont :

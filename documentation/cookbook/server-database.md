@@ -2,11 +2,15 @@
 
 _Cas d'usage_ : je souhaite utiliser un serveur de base de données PostgreSQL dédié pour héberger la base de données RUDI.
 
-## Déployer le serveur de base de données
+Dans ce document, les dénominations suivantes sont utilisées :
+* *ROOB_RUDI* : machine hébergeant les services RUDI (microservices, dataverse, Magnolia, mailhog)
+* *ROOB_BDD* : machine dédiée hébergeant la base de données PostgreSQL
 
-La première étape consiste à faire tourner un container PostgreSQL sur le serveur dédié.
+## Déployer le serveur de base de données *ROOB_BDD*
 
-Pour cela, récupérer le projet ROOB
+La première étape consiste à faire tourner un container PostgreSQL sur le serveur dédié *ROOB_BDD*.
+
+Pour cela, sur le serveur *ROOB_BDD*, récupérer le projet ROOB
 
 ```bash
 git clone https://github.com/rudi-platform/rudi-out-of-the-box.git
@@ -58,14 +62,14 @@ Démarrer les services :
 docker compose -f .\docker-compose-database.yml up -d
 ```
 
-## Modifier la configuration des services RUDI
+## Modifier la configuration des services RUDI sur le serveur *ROOB_RUDI*
 
-Les opérations suivantes sont à faire sur la machine hébergeant les services RUDI.
+Les opérations suivantes sont à faire sur la machine hébergeant les services RUDI *ROOB_RUDI*.
 
 Modifier la propriété suivante pour les microservices qui utilisent la base de données RUDI :
 
 ``` properties
-spring.datasource.url=jdbc:postgresql://<ip_ou_hostname_serveur_db>:5432/rudi
+spring.datasource.url=jdbc:postgresql://<ip_ou_hostname_ROOB_BDD>:5432/rudi
 ```
 
 Les fichiers concernés sont :
