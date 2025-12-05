@@ -33,7 +33,8 @@ Faire de même pour les autres logos à personnaliser en modifiant les autres pr
 
 En particulier, le logo du footer peut être changé par la propriété suivante :
 
-```	properties 
+```	json 
+{
 ...
     "footerLogo": {
         "logo": "/mes_logos/logo_footer.png",
@@ -41,4 +42,5 @@ En particulier, le logo du footer peut être changé par la propriété suivante
         "logoAltText": "Logo bleu orange beta de rennes metropole"
     },
 ...
+}
 ```
