@@ -4,7 +4,7 @@ name: rudiplatform
 services:
   reverse-proxy:
     # The official v2 Traefik docker image
-    image: traefik:v2.2
+    image: traefik:v2.11.31
     # Enables the web UI and tells Traefik to listen to docker
     command:
       - "--api.insecure=true"

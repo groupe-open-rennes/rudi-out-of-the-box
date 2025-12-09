@@ -136,6 +136,15 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment passer de traefik à Apache ?](./documentation/cookbook/treafik-to-apache.md)
 - [Comment configurer les logs ?](./documentation/cookbook/configuration-logs.md)
 - [Comment changer de host dans Magnolia ?](./documentation/cookbook/configuration-magnolia.md)
+- [Comment configurer l'envoi de mails ?](./documentation/cookbook/configuration-mail.md)
+- [Comment faire persister mes données (RUDI, Dataverse, Magnolia) ?](./documentation/cookbook/data-persistence.md)
+- [Comment séparer le déploiement de Dataverse sur un autre serveur ?](./documentation/cookbook/server-dataverse.md)
+- [Comment séparer le déploiement d'un des microservices RUDI sur un autre serveur ?](./documentation/cookbook/server-microservice-rudi.md)
+- [Comment utiliser un serveur de base de données séparé ?](./documentation/cookbook/server-database.md)
+- [Comment personnaliser le nom de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-usage-name.md)
+- [Comment personnaliser la page d'accueil de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-welcome-page.md)
+- [Comment modifier le contenu du sitemap de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-sitemap.md)
+- [Comment charger un script javascript personnalisé dans mon instance RUDI ROOB ?](./documentation/cookbook/configuration-custom-js.md)
 
 ## L'écosystème Rudi (les autres dépôts de code)
 

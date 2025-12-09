@@ -124,7 +124,7 @@ services:
       - ./config/kalim:/etc/rudi/config/
       - ./data/kalim:/opt/rudi/data/
     environment:
-      - JAVA_OPTIONS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF
+      - JAVA_OPTIONS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF -Dbase_dn=${base_dn}
     profiles:
       - portail
 

@@ -4,7 +4,21 @@
 		"apiDocumentation": "https://rudi-platform.github.io/rudi-documentation/api/authentification/",
 		"apiDocumentationService": "https://rudi-platform.github.io/rudi-documentation/",
 		"docRudi": "https://doc.rudi.fr/",
-		"tableDisplayMaxFileSize": "1000000000"
+		"tableDisplayMaxFileSize": "1000000000",
+		"datasetHelpLinks": [
+			{
+				"key": "restricted",
+				"url": "https://doc.rudi.fr/acces_donnees_restreintes/acces_donnees"
+			},
+			{
+				"key": "open",
+				"url": "https://doc.rudi.fr/acces_donnee_ouverte/acces_donnee_ouverte_media_type_API"
+			},
+			{
+				"key": "selfdata",
+				"url": "https://doc.rudi.fr/donnees_personnelles/intro"
+			}
+		]
 	},
 	"mapInfo": {
 		"defaultCenter": [-1.662712, 48.114767],
