@@ -15,6 +15,8 @@
 
 ### Avant de commencer 
 
+#### Prérequis logiciels
+
 Pour faire tourner RUDI Out-Of-The-Box sur votre machine, vous aurez besoin de :
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - Pour récupérer les fichiers 
 - [Git LFS](https://git-lfs.com/) - Pour gérer les grands fichiers avec Git - [Guide d'installation sous Linux](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage?platform=linux)
@@ -22,6 +24,14 @@ Pour faire tourner RUDI Out-Of-The-Box sur votre machine, vous aurez besoin de :
 - [Docker Compose](https://docs.docker.com/compose/install/) - Pour tout orchestrer [Guide d'installation sous Linux](https://docs.docker.com/compose/install/#plugin-linux-only)
 
 > _NOTE :_ Il n'est pas nécessaire de disposer de Docker Desktop pour faire tourner RUDI sur votre machine. En effet, Docker Desktop n'est gratuit que pour les utilisateurs individuels, pas pour les organisations. Cf. [Docker Pricing](https://www.docker.com/pricing/) pour plus d'informations.
+
+#### Prérequis techniques
+
+Pour faire tourner RUDI Out-Of-The-Box sur votre machine, vous aurez besoin au minimum de :
+- 24Go à 32Go de RAM
+- 2 à 4 CPU 1Core
+- 4Go d'espace disque disponible
+- une connexion internet fonctionnelle (ADSL 1 minimum)
 
 ### 1. Récupérez le code et donnez les droits d'accès nécessaires
 
@@ -145,6 +155,25 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment personnaliser la page d'accueil de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-welcome-page.md)
 - [Comment modifier le contenu du sitemap de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-sitemap.md)
 - [Comment charger un script javascript personnalisé dans mon instance RUDI ROOB ?](./documentation/cookbook/configuration-custom-js.md)
+
+## Mettre à jour votre instance RUDI ROOB
+
+Vous avez déjà déployé et configuré mon instance RUDI ROOB avec une version plus ancienne et vous souhaitez la mettre à jour.
+
+Choisissez la procédure à suivre selon votre cas de figure :
+  * Le [cas général](./documentation/cookbook/update-instance-general.md), lorsque vous n'avez pas fait de modifications autres que le fichier ``.env``.
+  * Le [cas avec des données personnalisées](./documentation/cookbook/update-instance-custom-data.md), lorsque vous avez fait des opérations sur votre instance que vous souhaitez conserver (création d'utilisateur, création de réutilisation, publication de jeu de données, modification d'articles sur Magnolia, etc.).
+  * Le [cas avec des modifications de configuration avancées](./documentation/cookbook/update-instance-advanced-config.md), lorsque vous avez modifié des fichiers de configuration.
+
+En fonction des montées de version, des étapes supplémentaires peuvent être nécessaires. Veuillez consulter le tableau ci-dessous pour plus d'informations et dérouler successivement les instructions spécifiques de chaque version si besoin.
+
+| Version | Notes de version |
+|---------|------------------|
+| v3.3.4  | Pas d'opération spécifique - [Notes de version v3.3.4](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.4) |
+| v3.3.5  | Pas d'opération spécifique - [Notes de version v3.3.5](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.5) |
+| v3.3.6  | Pas d'opération spécifique - [Notes de version v3.3.6](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.6) |
+| v3.3.7  | Pas d'opération spécifique - [Notes de version v3.3.7](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.7) |
+
 
 ## L'écosystème Rudi (les autres dépôts de code)
 
