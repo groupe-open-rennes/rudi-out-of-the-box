@@ -21,7 +21,7 @@
 #
 
 # Make the Java base image and version configurable (useful for trying newer Java versions and flavors)
-ARG BASE_IMAGE="gdcc/base:unstable"
+ARG BASE_IMAGE="gdcc/base:6.10-noble-p6.2025.10-j17"
 FROM $BASE_IMAGE
 
 # Make Payara use the "ct" profile for MicroProfile Config. Will switch various defaults for the application
