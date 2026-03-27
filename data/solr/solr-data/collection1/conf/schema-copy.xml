@@ -255,25 +255,9 @@
         WARNING: Do not remove the following include guards if you intend to use the neat helper scripts we provide.
     -->
     <!-- SCHEMA-FIELDS::BEGIN -->
-    <!--
-	<field name="3d3DTechnique" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dAltText" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dEquipment" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dExportedFileFormat" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dExportedFilePolygonCount" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dHandling" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dHeight" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dLength" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dLightingSetup" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dMasterFilePolygonCount" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dMaterialComposition" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dObjectDimensions" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dUnit" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="3dWeight" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="3dWidth" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="accessToSources" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="actionsToMinimizeLoss" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="alternativeTitle" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="alternativeTitle" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="alternativeURL" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="astroFacility" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="astroInstrument" type="text_en" multiValued="true" stored="true" indexed="true"/>
@@ -287,7 +271,52 @@
     <field name="characteristicOfSources" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="city" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="cleaningOperations" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="collectionMode" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-actionsToMinimizeLoss" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-city" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-cleaningOperations" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-collectionMode-cv" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-collectionMode-term" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-collectionMode-url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-collectionMode-vocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-controlOperations" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-country" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-dataCollectionSituation" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-dataCollector" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-deviationsFromSampleDesign" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-eastLongitude" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-frequencyOfDataCollection" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-geographicBoundingBox" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-geographicCoverage" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-geographicUnit" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-northLongitude" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-otherGeographicCoverage" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-researchInstrument-cv" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-researchInstrument-term" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-researchInstrument-url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-researchInstrument-vocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-responseRate" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-samplingProcedure-cv" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-samplingProcedure-term" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-samplingProcedure-url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-samplingProcedure-vocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-samplingProcedureFreeText" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-southLongitude" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-state" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-targetSampleActualSize" type="plong" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-targetSampleSize" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-targetSampleSizeFormula" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-timeMethod-cv" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-timeMethod-term" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-timeMethod-url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-timeMethod-vocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-unitOfAnalysis-cv" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-unitOfAnalysis-term" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-unitOfAnalysis-url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-unitOfAnalysis-vocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="cmm-universe" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-weighting" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="cmm-westLongitude" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="collectionMode" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="collectorTraining" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="contributor" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="contributorName" type="text_en" multiValued="true" stored="true" indexed="true"/>
@@ -313,12 +342,12 @@
     <field name="coverage.Temporal.StopTime" type="date_range" multiValued="true" stored="true" indexed="true"/>
     <field name="dataCollectionSituation" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="dataCollector" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="dataSources" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="datasetContact" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="datasetContactAffiliation" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="datasetContactEmail" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="datasetContactName" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="datasetLevelErrorNotes" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="dataSources" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="dateOfCollection" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="dateOfCollectionEnd" type="date_range" multiValued="true" stored="true" indexed="true"/>
     <field name="dateOfCollectionStart" type="date_range" multiValued="true" stored="true" indexed="true"/>
@@ -349,7 +378,6 @@
     <field name="journalVolume" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="journalVolumeIssue" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="keyword" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="keywordTermURI" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="keywordValue" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="keywordVocabulary" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="keywordVocabularyURI" type="text_en" multiValued="true" stored="true" indexed="true"/>
@@ -371,12 +399,11 @@
     <field name="producerName" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="producerURL" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="productionDate" type="date_range" multiValued="false" stored="true" indexed="true"/>
-    <field name="productionPlace" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="productionPlace" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="publication" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="publicationCitation" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="publicationIDNumber" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="publicationIDType" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="publicationRelationType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="publicationURL" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="redshiftType" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="relatedDatasets" type="text_en" multiValued="true" stored="true" indexed="true"/>
@@ -387,11 +414,150 @@
     <field name="resolution.Spectral" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="resolution.Temporal" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="responseRate" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_abstract" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_abstract_language" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_abstract_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_access_constraint" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_access_constraint_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_access_constraint_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_bibliographical_reference" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_bibliographical_reference_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_bibliographical_reference_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_confidentiality_gdpr_sensitive" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_confidentiality_restricted_access" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_custom_licence_label" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_custom_licence_label_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_custom_licence_label_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_custom_licence_uri" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_licence_label" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_licence_licence_type" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_mandatory_mention" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_mandatory_mention_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_mandatory_mention_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_other_constraints" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_other_constraints_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_other_constraints_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_usage_constraint" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_usage_constraint_lang" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_access_condition_usage_constraint_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_email" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_id" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_name" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_organization_name" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_role" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_contact_summary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_created" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_deleted" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_expires" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_published" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_updated" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_dates_validated" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_size" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_size_number_of_fields" type="plong" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_size_numbers_of_records" type="plong" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_dataset_update_frequency" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_doi" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_deletable_data" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_deletion_reason" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_health_data" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_matching_data" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_access" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_categories" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_held" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_sensibility_data" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_storage_period_unit" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_storage_period_value" type="plong" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_treatment_period_unit" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_treatment_period_value" type="plong" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_bounding_box_east_longitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_bounding_box_north_latitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_bounding_box_south_latitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_bounding_box_west_longitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_geographic_distribution" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_geography_projection" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_global_id" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_keywords" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_local_id" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_media" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_caption" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_connector_connector_parameters" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_connector_interface_contract" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_connector_url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_id" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_created" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_deleted" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_expires" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_published" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_updated" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_media_dates_validated" type="pdouble" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_name" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_type" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_media_visual" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_checksum_algo" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_checksum_hash" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_encoding" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_size" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_structure" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediafile_type" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_current_number_of_records" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_current_size" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_latency" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_period" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_total_number_of_records" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaseries_total_size" type="plong" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_mediaservice_api_documentation_url" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_api_version" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_contact_summary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_email" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_id" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_name" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_organization_name" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_contact_role" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_created" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_deleted" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_expires" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_published" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_updated" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_dates_validated" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_metadata_source" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_address" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_caption" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_coordinates_latitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_coordinates_longitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_id" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_name" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_metadata_info_provider_organization_summary" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_address" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_caption" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_coordinates_latitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_coordinates_longitude" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_id" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_name" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_producer_organization_summary" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_resource_language" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_resource_title" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_storage_status" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_summary" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_summary_html" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_summary_language" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_summary_text" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="rudi_temporal_spread" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_temporal_spread_end_date" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_temporal_spread_start_date" type="pdouble" multiValued="false" stored="true" indexed="true"/>
+    <field name="rudi_theme" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="samplingErrorEstimates" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="samplingProcedure" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="series" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="seriesInformation" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="seriesName" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="series" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="seriesInformation" type="text_en" multiValued="false" stored="true" indexed="true"/>
+    <field name="seriesName" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="socialScienceNotes" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="socialScienceNotesSubject" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="socialScienceNotesText" type="text_en" multiValued="false" stored="true" indexed="true"/>
@@ -406,14 +572,10 @@
     <field name="studyAssayOrganism" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyAssayOtherMeasurmentType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyAssayOtherOrganism" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="studyAssayOtherPlatform" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="studyAssayOtherTechnologyType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyAssayPlatform" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyAssayTechnologyType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyDesignType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="studyFactorType" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="studyOtherDesignType" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    <field name="studyOtherFactorType" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="subject" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="subtitle" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="targetSampleActualSize" type="plong" multiValued="false" stored="true" indexed="true"/>
@@ -424,15 +586,14 @@
     <field name="timePeriodCoveredEnd" type="date_range" multiValued="true" stored="true" indexed="true"/>
     <field name="timePeriodCoveredStart" type="date_range" multiValued="true" stored="true" indexed="true"/>
     <field name="title" type="text_en" multiValued="false" stored="true" indexed="true"/>
-    <field name="topicClassification" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="topicClassValue" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="topicClassVocab" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="topicClassVocabURI" type="text_en" multiValued="true" stored="true" indexed="true"/>
+    <field name="topicClassification" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="unitOfAnalysis" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="universe" type="text_en" multiValued="true" stored="true" indexed="true"/>
     <field name="weighting" type="text_en" multiValued="false" stored="true" indexed="true"/>
     <field name="westLongitude" type="text_en" multiValued="true" stored="true" indexed="true"/>
-    -->
     <!-- SCHEMA-FIELDS::END -->
 
 
@@ -514,22 +675,6 @@
         WARNING: Do not remove the following include guards if you intend to use the neat helper scripts we provide.
     -->
     <!-- SCHEMA-COPY-FIELDS::BEGIN -->
-    <!--
-    <copyField source="3d3DTechnique" dest="_text_" maxChars="3000"/>
-    <copyField source="3dAltText" dest="_text_" maxChars="3000"/>
-    <copyField source="3dEquipment" dest="_text_" maxChars="3000"/>
-    <copyField source="3dExportedFileFormat" dest="_text_" maxChars="3000"/>
-    <copyField source="3dExportedFilePolygonCount" dest="_text_" maxChars="3000"/>
-    <copyField source="3dHandling" dest="_text_" maxChars="3000"/>
-    <copyField source="3dHeight" dest="_text_" maxChars="3000"/>
-    <copyField source="3dLength" dest="_text_" maxChars="3000"/>
-    <copyField source="3dLightingSetup" dest="_text_" maxChars="3000"/>
-    <copyField source="3dMasterFilePolygonCount" dest="_text_" maxChars="3000"/>
-    <copyField source="3dMaterialComposition" dest="_text_" maxChars="3000"/>
-    <copyField source="3dObjectDimensions" dest="_text_" maxChars="3000"/>
-    <copyField source="3dUnit" dest="_text_" maxChars="3000"/>
-    <copyField source="3dWeight" dest="_text_" maxChars="3000"/>
-    <copyField source="3dWidth" dest="_text_" maxChars="3000"/>
     <copyField source="accessToSources" dest="_text_" maxChars="3000"/>
     <copyField source="actionsToMinimizeLoss" dest="_text_" maxChars="3000"/>
     <copyField source="alternativeTitle" dest="_text_" maxChars="3000"/>
@@ -546,6 +691,51 @@
     <copyField source="characteristicOfSources" dest="_text_" maxChars="3000"/>
     <copyField source="city" dest="_text_" maxChars="3000"/>
     <copyField source="cleaningOperations" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-actionsToMinimizeLoss" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-city" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-cleaningOperations" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-collectionMode-cv" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-collectionMode-term" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-collectionMode-url" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-collectionMode-vocabulary" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-controlOperations" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-country" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-dataCollectionSituation" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-dataCollector" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-deviationsFromSampleDesign" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-eastLongitude" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-frequencyOfDataCollection" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-geographicBoundingBox" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-geographicCoverage" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-geographicUnit" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-northLongitude" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-otherGeographicCoverage" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-researchInstrument-cv" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-researchInstrument-term" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-researchInstrument-url" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-researchInstrument-vocabulary" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-responseRate" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-samplingProcedure-cv" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-samplingProcedure-term" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-samplingProcedure-url" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-samplingProcedure-vocabulary" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-samplingProcedureFreeText" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-southLongitude" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-state" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-targetSampleActualSize" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-targetSampleSize" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-targetSampleSizeFormula" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-timeMethod-cv" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-timeMethod-term" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-timeMethod-url" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-timeMethod-vocabulary" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-unitOfAnalysis-cv" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-unitOfAnalysis-term" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-unitOfAnalysis-url" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-unitOfAnalysis-vocabulary" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-universe" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-weighting" dest="_text_" maxChars="3000"/>
+    <copyField source="cmm-westLongitude" dest="_text_" maxChars="3000"/>
     <copyField source="collectionMode" dest="_text_" maxChars="3000"/>
     <copyField source="collectorTraining" dest="_text_" maxChars="3000"/>
     <copyField source="contributor" dest="_text_" maxChars="3000"/>
@@ -572,12 +762,12 @@
     <copyField source="coverage.Temporal.StopTime" dest="_text_" maxChars="3000"/>
     <copyField source="dataCollectionSituation" dest="_text_" maxChars="3000"/>
     <copyField source="dataCollector" dest="_text_" maxChars="3000"/>
+    <copyField source="dataSources" dest="_text_" maxChars="3000"/>
     <copyField source="datasetContact" dest="_text_" maxChars="3000"/>
     <copyField source="datasetContactAffiliation" dest="_text_" maxChars="3000"/>
     <copyField source="datasetContactEmail" dest="_text_" maxChars="3000"/>
     <copyField source="datasetContactName" dest="_text_" maxChars="3000"/>
     <copyField source="datasetLevelErrorNotes" dest="_text_" maxChars="3000"/>
-    <copyField source="dataSources" dest="_text_" maxChars="3000"/>
     <copyField source="dateOfCollection" dest="_text_" maxChars="3000"/>
     <copyField source="dateOfCollectionEnd" dest="_text_" maxChars="3000"/>
     <copyField source="dateOfCollectionStart" dest="_text_" maxChars="3000"/>
@@ -608,7 +798,6 @@
     <copyField source="journalVolume" dest="_text_" maxChars="3000"/>
     <copyField source="journalVolumeIssue" dest="_text_" maxChars="3000"/>
     <copyField source="keyword" dest="_text_" maxChars="3000"/>
-    <copyField source="keywordTermURI" dest="_text_" maxChars="3000"/>
     <copyField source="keywordValue" dest="_text_" maxChars="3000"/>
     <copyField source="keywordVocabulary" dest="_text_" maxChars="3000"/>
     <copyField source="keywordVocabularyURI" dest="_text_" maxChars="3000"/>
@@ -635,7 +824,6 @@
     <copyField source="publicationCitation" dest="_text_" maxChars="3000"/>
     <copyField source="publicationIDNumber" dest="_text_" maxChars="3000"/>
     <copyField source="publicationIDType" dest="_text_" maxChars="3000"/>
-    <copyField source="publicationRelationType" dest="_text_" maxChars="3000"/>
     <copyField source="publicationURL" dest="_text_" maxChars="3000"/>
     <copyField source="redshiftType" dest="_text_" maxChars="3000"/>
     <copyField source="relatedDatasets" dest="_text_" maxChars="3000"/>
@@ -646,6 +834,145 @@
     <copyField source="resolution.Spectral" dest="_text_" maxChars="3000"/>
     <copyField source="resolution.Temporal" dest="_text_" maxChars="3000"/>
     <copyField source="responseRate" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_abstract" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_abstract_language" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_abstract_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_access_constraint" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_access_constraint_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_access_constraint_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_bibliographical_reference" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_bibliographical_reference_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_bibliographical_reference_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_confidentiality_gdpr_sensitive" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_confidentiality_restricted_access" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_custom_licence_label" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_custom_licence_label_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_custom_licence_label_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_custom_licence_uri" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_licence_label" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_licence_licence_type" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_mandatory_mention" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_mandatory_mention_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_mandatory_mention_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_other_constraints" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_other_constraints_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_other_constraints_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_usage_constraint" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_usage_constraint_lang" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_access_condition_usage_constraint_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_email" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_organization_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_role" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_contact_summary" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_created" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_deleted" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_expires" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_published" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_updated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_dates_validated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_size" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_size_number_of_fields" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_size_numbers_of_records" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_dataset_update_frequency" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_doi" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_deletable_data" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_deletion_reason" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_health_data" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_matching_data" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_access" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_categories" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_selfdata_held" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_sensibility_data" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_storage_period_unit" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_storage_period_value" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_treatment_period_unit" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_ext_metadata_ext_selfdata_ext_selfdata_content_treatment_period_value" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_bounding_box_east_longitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_bounding_box_north_latitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_bounding_box_south_latitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_bounding_box_west_longitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_geographic_distribution" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_geography_projection" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_global_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_keywords" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_local_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_caption" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_connector_connector_parameters" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_connector_interface_contract" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_connector_url" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_created" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_deleted" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_expires" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_published" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_updated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_media_dates_validated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_type" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_media_visual" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_checksum_algo" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_checksum_hash" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_encoding" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_size" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_structure" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediafile_type" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_current_number_of_records" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_current_size" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_latency" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_period" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_total_number_of_records" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaseries_total_size" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_mediaservice_api_documentation_url" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_api_version" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_contact_summary" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_email" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_organization_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_contact_role" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_created" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_deleted" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_expires" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_published" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_updated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_dates_validated" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_metadata_source" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_address" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_caption" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_coordinates_latitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_coordinates_longitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_metadata_info_provider_organization_summary" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_address" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_caption" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_coordinates_latitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_coordinates_longitude" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_id" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_name" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_producer_organization_summary" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_resource_language" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_resource_title" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_storage_status" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_summary" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_summary_html" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_summary_language" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_summary_text" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_temporal_spread" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_temporal_spread_end_date" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_temporal_spread_start_date" dest="_text_" maxChars="3000"/>
+    <copyField source="rudi_theme" dest="_text_" maxChars="3000"/>
     <copyField source="samplingErrorEstimates" dest="_text_" maxChars="3000"/>
     <copyField source="samplingProcedure" dest="_text_" maxChars="3000"/>
     <copyField source="series" dest="_text_" maxChars="3000"/>
@@ -665,14 +992,10 @@
     <copyField source="studyAssayOrganism" dest="_text_" maxChars="3000"/>
     <copyField source="studyAssayOtherMeasurmentType" dest="_text_" maxChars="3000"/>
     <copyField source="studyAssayOtherOrganism" dest="_text_" maxChars="3000"/>
-    <copyField source="studyAssayOtherPlatform" dest="_text_" maxChars="3000"/>
-    <copyField source="studyAssayOtherTechnologyType" dest="_text_" maxChars="3000"/>
     <copyField source="studyAssayPlatform" dest="_text_" maxChars="3000"/>
     <copyField source="studyAssayTechnologyType" dest="_text_" maxChars="3000"/>
     <copyField source="studyDesignType" dest="_text_" maxChars="3000"/>
     <copyField source="studyFactorType" dest="_text_" maxChars="3000"/>
-    <copyField source="studyOtherDesignType" dest="_text_" maxChars="3000"/>
-    <copyField source="studyOtherFactorType" dest="_text_" maxChars="3000"/>
     <copyField source="subject" dest="_text_" maxChars="3000"/>
     <copyField source="subtitle" dest="_text_" maxChars="3000"/>
     <copyField source="targetSampleActualSize" dest="_text_" maxChars="3000"/>
@@ -683,15 +1006,14 @@
     <copyField source="timePeriodCoveredEnd" dest="_text_" maxChars="3000"/>
     <copyField source="timePeriodCoveredStart" dest="_text_" maxChars="3000"/>
     <copyField source="title" dest="_text_" maxChars="3000"/>
-    <copyField source="topicClassification" dest="_text_" maxChars="3000"/>
     <copyField source="topicClassValue" dest="_text_" maxChars="3000"/>
     <copyField source="topicClassVocab" dest="_text_" maxChars="3000"/>
     <copyField source="topicClassVocabURI" dest="_text_" maxChars="3000"/>
+    <copyField source="topicClassification" dest="_text_" maxChars="3000"/>
     <copyField source="unitOfAnalysis" dest="_text_" maxChars="3000"/>
     <copyField source="universe" dest="_text_" maxChars="3000"/>
     <copyField source="weighting" dest="_text_" maxChars="3000"/>
     <copyField source="westLongitude" dest="_text_" maxChars="3000"/>
-    -->
     <!-- SCHEMA-COPY-FIELDS::END -->
 
 
