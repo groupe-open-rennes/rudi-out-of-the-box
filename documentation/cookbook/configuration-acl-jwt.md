@@ -6,11 +6,10 @@ _Cas d'usage_ : je souhaite utiliser un certificat persisté pour signer les tok
 
 Par défaut, le service ACL génère une clé aléatoire à chaque démarrage pour signer les tokens JWT. Cela pose plusieurs problèmes :
 
-* Les tokens JWT signés avant un redémarrage du service deviennent invalides après celui-ci
 * Impossibilité d'utiliser les tokens entre plusieurs redémarrages
 * Manque de transparence et de contrôle sur la signature des tokens
 
-La solution est de générer une clé privée unique que vous persistez dans votre configuration. Cette clé sera utilisée systématiquement pour signer tous les tokens JWT, indépendamment des redémarrages.
+La solution est de générer une clé privée unique persistée dans un keystore dédiée et de configurer le microservice ACL afin qu'il utilise cette clé pour la signature des tokens.
 
 ## Prérequis
 
@@ -106,4 +105,4 @@ Redémarrer le conteneur ACL pour que la configuration soit prise en compte :
 docker compose -f ./docker-compose-rudi.yml up -d acl
 ```
 
-Les tokens JWT signés par le service ACL utiliseront désormais la clé privée persistée présente dans le keystore `rudi.jwt.jks`. 
+Les tokens JWT signés par le service ACL utiliseront désormais la clé privée présente dans le keystore `rudi.jwt.jks`. 
