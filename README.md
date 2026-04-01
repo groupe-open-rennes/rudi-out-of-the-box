@@ -167,12 +167,14 @@ Choisissez la procédure à suivre selon votre cas de figure :
 
 En fonction des montées de version, des étapes supplémentaires peuvent être nécessaires. Veuillez consulter le tableau ci-dessous pour plus d'informations et dérouler successivement les instructions spécifiques de chaque version si besoin.
 
-| Version | Notes de version |
-|---------|------------------|
-| v3.3.4  | Pas d'opération spécifique - [Notes de version v3.3.4](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.4) |
-| v3.3.5  | Pas d'opération spécifique - [Notes de version v3.3.5](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.5) |
-| v3.3.6  | Pas d'opération spécifique - [Notes de version v3.3.6](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.6) |
-| v3.3.7  | Pas d'opération spécifique - [Notes de version v3.3.7](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.7) |
+| Version | Opération nécessaires                                                        | Notes de version                                                                                                                                   |
+|---------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| v3.3.4  | Pas d'opération spécifique                                                   | [Notes de version v3.3.4](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.4)                                                        |
+| v3.3.5  | Pas d'opération spécifique                                                   | [Notes de version v3.3.5](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.5)                                                        |
+| v3.3.6  | Pas d'opération spécifique                                                   | [Notes de version v3.3.6](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.6)                                                        |
+| v3.3.7  | Pas d'opération spécifique                                                   | [Notes de version v3.3.7](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.7)                                                        |
+| v3.3.8  | Pas d'opération spécifique                                                   | [Notes de version v3.3.8](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.8)                                                        |
+| v3.3.9  | [Opération à effectuer pour la v3.3.9](./documentation/changelogs/v3.3.9.md) | [Notes de version v3.3.9](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.9)                                                        |
 
 
 ## L'écosystème Rudi (les autres dépôts de code)
