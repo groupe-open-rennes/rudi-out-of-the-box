@@ -156,6 +156,7 @@ Voici un aperçu de la structure des répertoires et fichiers du projet :
 - [Comment personnaliser la page d'accueil de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-welcome-page.md)
 - [Comment modifier le contenu du sitemap de mon instance RUDI ROOB ?](./documentation/cookbook/configuration-sitemap.md)
 - [Comment charger un script javascript personnalisé dans mon instance RUDI ROOB ?](./documentation/cookbook/configuration-custom-js.md)
+- [Comment mettre en place un SSO ?](./documentation/cookbook/configuration-sso.md)
 
 ## Mettre à jour votre instance RUDI ROOB
 
@@ -176,6 +177,7 @@ En fonction des montées de version, des étapes supplémentaires peuvent être 
 | v3.3.7  | Pas d'opération spécifique                                                   | [Notes de version v3.3.7](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.7)                                                        |
 | v3.3.8  | Pas d'opération spécifique                                                   | [Notes de version v3.3.8](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.8)                                                        |
 | v3.3.9  | [Opération à effectuer pour la v3.3.9](./documentation/changelogs/v3.3.9.md) | [Notes de version v3.3.9](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.9)                                                        |
+| v3.3.13  | [Opération à effectuer pour la v3.3.13](./documentation/changelogs/v3.3.13.md) | <pre><ul><li> [Notes de version v3.3.10](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.10) </li><li> [Notes de version v3.3.12](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.12) </li><li> [Notes de version v3.3.13](https://github.com/rudi-platform/rudi-portal/releases/tag/v3.3.13) </li></ul></pre>|
 
 
 ## L'écosystème Rudi (les autres dépôts de code)
